@@ -1,0 +1,151 @@
+@import "../utils/_variables";
+@import "../utils/_mixin";
+
+.footer {
+  @include d-flex(null, center, null);
+  width: 100%;
+  padding: 60px 0;
+  background-color: $background-black-1;
+}
+.footer-container {
+  @include d-flex1(center,space-between, row, wrap);
+  width: 95%;
+  max-width: calc(1600px - 430px);
+  row-gap: 10px;
+
+  .footer-addreess {
+      display: flex;
+      justify-content: flex-start;
+      flex-direction: column;
+  .footer__logo {
+      font-family: "Raleway";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 26px;
+      line-height: 31px;
+      letter-spacing: 0.03em;
+      color: $accent-color;
+      padding-bottom: 20px;
+     }
+    }
+  
+ 
+  .footer__location {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.03em;
+    color: $primary-white-color;
+  }
+  .footer__contact {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.03em;
+    color: $background-gradient-3;
+    padding-bottom: 9px;
+  }
+}
+.aside-encuentrenos {
+  @include d-flex(null, null, column);
+  gap: 20px;
+
+  .aside__title {
+    display: flex;
+    justify-content: flex-start;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: $primary-white-color;
+  }
+}
+.aside__list-menu {
+  @include d-flex(null, center, null);
+  gap: 20px;
+  .aside__iconos-sociales {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+  }
+}
+.aside-container {
+  width: 480px;
+ 
+  .aside__title-suscribase {
+   
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    padding-bottom: 20px;
+    color: $primary-white-color;
+  
+  }
+}
+.form-container {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 20px;
+  width: 100%;
+  .aside__input {
+    padding: 16px;
+    width: 100%;
+    border: $border;
+    filter: $filter;
+    background: $background-black-2;
+    border-radius: 4px;
+  }
+  .aside-boton {
+    @include d-flex(center, center, null);
+    text-align: center;
+    gap: 20px;
+    width: 70%;
+    height: 50px;
+    background: $accent-color;
+    box-shadow: $box-shadow-1;
+    border-radius: 4px;
+    color: $primary-white-color;
+  }
+}
+
+@media screen and (max-width: 768.98px) {
+  .footer-container{
+    justify-content: center;
+  }
+  .footer-addreess {
+    align-items: center;
+    text-align: center;
+  }
+  
+  .footer-addreess {
+    width: 45%;
+  }
+  .aside-encuentrenos {
+    width: 45%;
+  }
+}
+
+@media screen and (max-width: 480.98px) {
+  .footer-container {
+    justify-content: center;
+  }
+  .footer-addreess {
+    width: 100%;
+  }
+  .aside-encuentrenos {
+    width: 100%;
+    align-items: center;
+  }
+  .aside-container{
+    width: 380px;
+  }
+}

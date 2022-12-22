@@ -1,0 +1,82 @@
+@import "../utils/_variables";
+@import "../utils/_mixin";
+
+.charges {
+  @include d-flex(null, center, null);
+  background-color: $background-white-1;
+  margin-bottom: 50px;
+  width: 100%;
+  .charges-container {
+    max-width: calc(1600px - 430px);
+    width: 95%;
+    padding-bottom: 30px;
+  }
+  .charges__title {
+    font-weight: 700;
+    font-size: 36px;
+    text-align: center;
+    color: $primary-black-color;
+    padding-bottom: 30px;
+    padding-top: 30px;
+  }
+  .charges-items {
+    display: flex;
+    gap: 30px;
+  }
+}
+  .charge-item {
+   box-shadow: $box-shadow-2;
+   border-radius: 0px 0px 4px 4px;
+   animation: tarjeta1Out 2.5s cubic-bezier(0.4, 0, 0.2, 1);
+   width: 100%;
+   max-width: 480px;
+
+  .charges__name {
+    font-weight: 500;
+    font-size: 16px;
+    text-align: center;
+    color: $primary-black-color;
+    padding-top: 30px;
+    margin-bottom: 10px;
+  }
+  .charges__description {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    color: $primary-text-color;
+    margin-bottom: 16px;
+  }
+  .charges__redes-sociales {
+    @include d-flex(null, center, null);
+    gap: 10px;
+    padding-bottom: 20px;
+  }
+}
+@media screen and (max-width: 768.98px) {
+  .charges .charges-items {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .charges .charge-item {
+    width: 40%;
+  }
+}
+
+@media screen and (max-width: 480.98px) {
+  .charges .charges__title {
+    font-size: 28px;
+    line-height: 33px;
+  }
+
+  .charges .charges-items {
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .charges .charge-item {
+    width: 100%;
+  }
+}

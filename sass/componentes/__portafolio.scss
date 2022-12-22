@@ -1,0 +1,158 @@
+@import "../utils/_variables";
+@import "../utils/_mixin";
+
+.products {
+  margin-top: 94px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.products-container {
+  width: 95%;
+  max-width: 1170px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.products-list {
+  @include d-flex(null, center, null);
+  gap: 15px;
+  margin-bottom: 50px;
+}
+.products__button-filter {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+  padding: 10px 20px;
+  color: $primary-black-color;
+  background: $accent-color;
+  box-shadow: $box-shadow-4;
+  border: none;
+  border-radius: 4px;
+}
+
+.products__button {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+  padding: 10px 20px;
+  color: $primary-black-color;
+  box-shadow: $box-shadow-4;
+  border: none;
+  border-radius: 4px;
+}
+
+.projects-list {
+  @include d-flex1(center, center, row, wrap);
+  gap: 30px;
+  padding-bottom: 82px;
+  width: 100%;
+  .projects__item {
+    gap: 30px;
+    width: 370px;
+    height: 404px;
+    border: $border-4;
+    border-radius: 4px;
+  }
+}
+
+.overlay-project {
+  position: relative;
+  overflow: hidden;
+}
+
+.overlay {
+  @include d-flex(null, center, column);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: $background-accent-1;
+  transform: translateY(0);
+  transition: transform 250ms ease;
+
+  .overlay__description {
+    font-weight: 400;
+    font-size: 18px;
+    padding: 24px 63px;
+    line-height: 28px;
+    letter-spacing: 0.03em;
+    color: $primary-white-color;
+  }
+}
+
+.projects__item-title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 0.06em;
+  color: $primary-black-color;
+  padding-top: 20px;
+  padding-left: 10px;
+  margin-bottom: 5px;
+}
+
+.projects__item-description {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 30px;
+  letter-spacing: 0.03em;
+  text-align: start;
+  color: $primary-text-color;
+  padding-bottom: 20px;
+  padding-left: 10px;
+}
+@media screen and (max-width: 768.98px) {
+  .header .header__logo {
+    font-size: 24px;
+  }
+  .navbar .nav__contact-info {
+    font-size: 12px;
+  }
+  .projects-list .projects__item{
+    width: 45%;
+  }
+  .projects__item-title {
+    line-height: 36px;
+  }
+  .aside-encuentrenos {
+    display: flex;
+    align-items: center;
+  }
+  .aside-container .aside__title-suscribase {
+    text-align: center;
+  }
+  .aside-container {
+    width: 50%;
+  }
+  .form-container {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 480.98px) {
+  .products-list {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+  .projects-list .projects__item{
+    flex-wrap: nowrap;
+    width: 354px;
+    height: 400px;
+  }
+  .aside-container .aside__title-suscribase {
+    text-align: center;
+  }
+  .aside-container {
+    width: 370px;
+  }
+
+  .form-container {
+    flex-direction: column;
+  }
+}

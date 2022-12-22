@@ -1,0 +1,82 @@
+@import "../utils/_variables";
+@import "../utils/_mixin";
+
+.icons-email {
+  width: 16px;
+  height: 11px;
+  margin-right: 10px;
+}
+
+.icons-telefono {
+  width: 10px;
+  height: 13px;
+  margin-right: 10px;
+}
+
+.icons-list {
+  @include d-flex(center,center,null);
+  height: 120px;
+  width: 270px;
+  background-color:$background-white-1;
+  border-radius: 15px;
+  margin-bottom: 30px;
+  width: 100%;
+}
+.icons__detalles {
+  width: 70px;
+  height: 70px;
+}
+.icon-social {
+  @include d-flex(center,center,null);
+  background-color: transparent;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+}
+.icon-redes {
+  width: 20px;
+  height: 20px;
+  fill: #afb1b8;
+}
+.icon-social:hover {
+  background-color: $accent-color;
+}
+
+.icon-social:hover .icon-redes {
+  fill: $primary-white-color;
+}
+.customer__icon {
+  width: 170px;
+  height: 81px;
+  border: $border-5;
+  border-radius: 15px;
+  fill: $gray-2;
+}
+
+.customer__icon:hover {
+  fill: $accent-color;
+  cursor: pointer;
+}
+.aside__icon {
+  fill: $primary-white-color;
+}
+.aside__iconos-sociales:hover {
+  background-color: $accent-color;
+}
+.aside__icon-telegram {
+  fill: $primary-white-color;
+  width: 24px;
+  height: 24px;
+}
+.products__button-filter,
+.products__button:hover {
+  background: $accent-color;
+  cursor: pointer;
+}
+.projects__item:hover {
+  box-shadow: $box-shadow-5;
+  cursor: pointer;
+}
+.overlay-project:hover .overlay {
+  transform: translateY(-100%);
+}

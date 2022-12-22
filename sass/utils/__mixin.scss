@@ -1,0 +1,14 @@
+@mixin d-flex($aling:center,$justify:center,$direction:row){
+  display: flex;
+  align-items: $aling;
+  justify-content: $justify;
+  flex-direction: $direction;
+}
+@mixin d-flex1($aling:center,$justify:center,$direcion:row,$flex-wrap:wrap){
+  display: flex;
+  align-items: $aling;
+  justify-content: $justify;
+  flex-direction: $direcion;
+  flex-wrap: $flex-wrap;
+
+}

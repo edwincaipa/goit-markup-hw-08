@@ -1,0 +1,245 @@
+@import "../utils/_variables";
+@import "../utils/_mixin";
+
+.header {
+  @include d-flex(center, center, null);
+  border: 1px solid #ececec;
+  height: 80px;
+  .header__logo {
+    font-family: "Raleway";
+    font-weight: 700;
+    font-size: 26px;
+    color: $accent-color;
+    width: 25%
+  }
+}
+.header-container {
+  @include d-flex(center, space-between, null);
+  height: 80px;
+  width: 100%;
+  max-width: calc(1600px - 430px);
+  padding: 0 12px;
+}
+.btn {
+  display: none;
+}
+
+.navbar {
+  @include d-flex(center, space-between, null);
+  width: 100%;
+  padding: 30px;
+
+  .navbar__menu {
+    @include d-flex(center, space-between, null);
+    gap: 50px;
+  }
+
+  .navbar__menu-link {
+    font-weight: 500;
+    font-size: 14px;
+    color: $primary-black-color;
+    position: relative;
+  }
+
+  .navbar__menu-link:hover {
+    color: $accent-color;
+  }
+
+  .navbar__menu-link--estudio {
+    color: $accent-color;
+  }
+
+  .navbar__menu-link--estudio:after {
+    position: absolute;
+    display: block;
+    content: "";
+    width: 100%;
+    height: 5px;
+    background: $accent-color;
+    border-radius: 4px;
+    margin-top: 27px;
+  }
+
+  .navbar__menu-link--portafolio:after {
+    position: absolute;
+    display: block;
+    content: "";
+    width: 100%;
+    height: 5px;
+    background: $accent-color;
+    border-radius: 4px;
+    margin-top: 27px;
+  }
+
+  .nav__contact {
+    @include d-flex(center, space-between, null);
+    gap: 50px;
+  }
+  .nav__contact-info {
+    font-family: "Roboto";
+    font-weight: 500;
+    font-size: 14px;
+    color: $primary-text-color;
+  }
+  .redes-sociales-navbar {
+    display: none;
+  }
+  .info-contact{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+   
+  }
+  .nav__contact-info:hover,
+  .nav__contact-info:hover .icons-email,
+  .nav__contact-info:hover .icons-telefono {
+    fill: $accent-color;
+    color: $accent-color-hover;
+  }
+}
+
+@media screen and (max-width: 768.98px) {
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .header .header__logo {
+    width: 25%;
+  }
+
+  .btn {
+    display: none;
+  }
+
+  .navbar {
+    visibility: visible;
+    opacity: 1;
+    z-index: initial;
+    position: initial;
+    min-height: initial;
+    justify-content: flex-end;
+    gap: 50px;
+  }
+  .nav__contact{
+    flex-direction: column;
+  }
+
+  .navbar .navbar__menu {
+    flex-direction: row;
+    width: 50%;
+  }
+
+  .navbar .nav__contact {
+    display: flex;
+    align-items: flex-end;
+    width: 40%;
+  }
+  .navbar .info-contact{
+    flex-direction: column;
+  }
+  
+}
+
+@media screen and (max-width: 480.98px) {
+  .header-container {
+    position: relative;
+    padding: 0 12px;
+  }
+
+  .header__logo {
+    width: 25%;
+  }
+
+  .btn {
+    @include d-flex(center, center, null);
+    position: relative;
+    cursor: pointer;
+  }
+
+  .Menu {
+    right: 0;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    transition: 0.5s;
+    z-index: 999;
+  }
+
+  .Cerrar {
+    visibility: hidden;
+    opacity: 0;
+    right: 0;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    z-index: 1000;
+    transition: 0.5s;
+  }
+
+  .navbar {
+    @include d-flex(center, space-between, column);
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    padding: 20px;
+    min-height: 100vh;
+    background-color: #ffff;
+    transition: 0.5s;
+    z-index: 998;
+  }
+
+  .nav--show {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .navbar .navbar__menu {
+    @include d-flex(flex-start, null, column);
+    width: 100%;
+  }
+
+  .navbar .nav__contact {
+    @include d-flex(flex-start, null, column);
+    width: 100%;
+    
+  }
+
+  .navbar .navbar__menu-link {
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 30px;
+    letter-spacing: 0.02em;
+  }
+
+  .navbar__menu-link--estudio:after {
+    visibility: hidden;
+  }
+
+
+  .navbar .nav__contact-info {
+    font-weight: 500;
+    font-size: 34px;
+    line-height: 40px;
+    letter-spacing: 0.02em;
+  }
+
+  .navbar .redes-sociales-navbar {
+    display: flex;
+    gap: 20px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 0.02em;
+    color: $accent-color;
+  }
+  .icons-email{
+    display: none;
+  }
+  .icons-telefono{
+    display: none;
+  }
+}
