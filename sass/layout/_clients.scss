@@ -10,8 +10,4 @@
   flex-basis: calc((100% - 30px) / 2);
   @include clients-list__item(center, center);
   @extend %clients-list__item;
-
-  &:hover {
-    border-color: $accent-color;
-  }
 }

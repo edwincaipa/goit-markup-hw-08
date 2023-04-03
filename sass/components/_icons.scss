@@ -18,13 +18,15 @@
     background-color: $accent-color;
   }
 }
-.clients-list__icon {
+.clients-list__item {
   fill: $primary-text-color;
-
-  &:hover {
+  &:hover,
+  &:focus {
     fill: $accent-color;
+    border-color: $accent-color;
   }
 }
+
 
 .footer-icons {
   display: flex;

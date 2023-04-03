@@ -9,6 +9,7 @@
 }
 .portfolio-list__item {
   flex-basis: calc((100% - 90px) / 3);
+  border: 1px solid #eeeeee;
   @media (min-width: 768px) {
     flex-basis: calc((100% - 30px) / 2);
   }
@@ -34,6 +35,9 @@
 }
 .portfolio-list__text {
   @extend %portfolio-list__text;
+}
+.portfolio-body {
+  padding: 20px 24px;
 }
 .portfolio-title {
   @extend %portfolio-title;

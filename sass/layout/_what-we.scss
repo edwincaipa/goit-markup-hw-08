@@ -1,5 +1,12 @@
+.images {
+  display: none;
+  @media (min-width: 1200px) {
+    display: flex;
+  }
+}
 .images-wedo {
   @include images-wedo(30px);
+  justify-content: space-between;
 }
 .images-wedo__item {
   flex-basis: calc((100% - 90px) / 3);
